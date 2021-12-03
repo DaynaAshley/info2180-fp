@@ -29,3 +29,7 @@ CREATE TABLE Issues (
 INSERT INTO Users (firstname, lastname, password, email, date_joined) 
 SELECT 'administrator','administrator', md5('password123'), 'admin@project2.com', '2021-12-01' 
 WHERE NOT EXISTS (SELECT email FROM Users WHERE email='admin@project2.com');
+
+
+INSERT INTO Issues (title, description,type, priority, status, assigned_to, created_by, created, updated)
+VALUES ('Setup Logger', 'Lorem Ipsum dolor', 'Bug', 'Major', 'Open','Marcia Brady', 'John Clarke', '2021-12-02 12:00:00', '2021-12-02 12:00:00');

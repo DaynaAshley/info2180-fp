@@ -5,61 +5,85 @@ body {
     font-size: 18px;
 }
 
-header{
+header {
     background-color: black;
     font-size: 12px;
     padding: 2px;
     color: white;
-
-
 }
-header i{
+
+header i {
     padding-left: 20px;
     padding-right: 20px;
 }
 
-nav{   
+nav {
     float: left;
     background-color: lightgrey;
     list-style: none;
-
     font-size: 30px;
     padding-bottom: 100%;
     padding-right: 100px;
     padding-left: 20px;
-    
 }
 
-i{
+i {
     padding-right: 5px;
 }
 
-.hbtn,.abtn,.nbtn,.lbtn{
+.hbtn,
+.abtn,
+.nbtn,
+.lbtn {
     border: 0px;
     background-color: lightgray;
 }
 
-
-.results{
+.results {
     padding-top: 20px;
     padding-left: 260px;
     padding-right: 150px;
     padding-bottom: 150px;
 }
 
-.box{
+.box {
     display: flex;
     flex-direction: column;
     row-gap: 10px;
     background-color: lightgrey;
-    padding:50px;
-
-    float:right;
-    
+    padding: 50px;
+    float: right;
 }
 
-.box-cont{
+.box-cont {
     padding-right: 250px;
     float: right;
-   
+}
+
+.btnclosed {
+    /* display: flex;
+    flex-direction: column; */
+    margin-top: 10px;
+    background-color: blue;
+    color: white;
+    align-items: center;
+    border: none;
+    border-radius: 5px;
+    width: 150px;
+    height: 30px;
+    margin-left: 900px;
+    margin-top: 300px;
+}
+
+.btnprogress {
+    margin-top: 10px;
+    background-color: green;
+    color: white;
+    text-align: center;
+    border: none;
+    border-radius: 5px;
+    width: 150px;
+    height: 30px;
+    margin-top: 10px;
+    margin-left: 900px;
 }
