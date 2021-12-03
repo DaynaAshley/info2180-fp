@@ -2,56 +2,58 @@
     session_start();
 ?>
  
-<!DOCTYPE html>
-<html lang="en">
-<head>
-   <meta charset="UTF-8">
-   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <link rel="stylesheet" type="text/css" href="http://localhost/info2180-finalproject/styles/userstyles.css" />
-   <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-   <script src="http://localhost/info2180-finalproject/dashjavascript.js" type="text/javascript"></script>
-   <title>Newuser</title>
-</head>
-<body>
-   <div class="grid-container">
-       <header>
-           <ul>
-               <li id="header">
-                   BugMe Issue Tracker
-               </li>
-           </ul>
-       </header>
+ <!DOCTYPE html>
+<html>
+   
+  <head>
+    <meta charset="utf-8">
+    <title>Add User</title>
+    <link rel="stylesheet" href="adduser.css" media="screen" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="adduser.js"></script>
+    <script src="sidebar.js"></script>
+  </head>
+  <body>
+    <header>
+      <h1><i class="fa fa-bug"></i>BugMe Issue Tracker</h1>
+    </header>  
+    <div class='side'>
        <nav>
-           <ul>
-               <li id="home"><a href="dashboard.php">Home</a></li>
-               <li id="user"><a href="adduser.php">Add User</a></li>
-               <li id="issue"><a href="issue.php">New Issue</a></li>
-               <li id="logout"><a href="logout.php">Logout</a></li>
-           </ul>
-</nav>
+        <div class="side-bar">
+          <li><button class="hbtn"><i class="fa fa-home"></i> Home</button></li>
+          <li><button class="abtn"><i class="fa fa-user-plus"></i> Add User</button></li>
+          <li><button class="nbtn"><i class="fa fa-plus-circle"></i> New Issue</button></li>
+          <li><button class="lbtn"><i class="fa fa-power-off"></i> Logout</button></li>
+        </div>
+      </nav>
+</div>
+
            <main id="display">
-               <form id="newuser">
+               
 		            <div id="fields">
                        <h1> New User </h1>
                        <br><label for="fname">Firstname</label></br>
                        <input type="text" name="fname" id="fname"/><br>
+                       <div class="firstname"></div>
+                       
                        <label for="lname">Lastname</label><br>
 			            <input type ="text" name="lname" id="lname"/> <br>			
-			            <label for="password">Password</label><br>
-                       <input type="password" name="password" id="password" /><br>
-			            <label for="email">Email</label><br>
+			            <div class="lastname"></div>
+                       
+                        <label for="password">Password</label><br>
+                       <input type="text" name="password" id="password" /><br>
+                       <div class="password"></div>
+                       
+                       <label for="email">Email</label><br>
 			            <input type="email" name="email" id="email"/><br>			
+                        <div class="email"></div>
+                       
+                        <div class="results"></div>
                         <div id="subdiv">
-                            <input type="submit" name="subbut" id="subbut" onclick="return Validate(newuser);" value="Submit" />
+                        <button class="sbtn">Submit</button>
                         </div>
-                            <input type="hidden" name="submitted" id="submitted" value="1" />
 		            </div>
-               </form>
            </main>
-                  
-            
-               
-    
-   </div>
+
 </body>
 </html>

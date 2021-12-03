@@ -31,7 +31,7 @@ $results2 = $stmt2->fetchAll(PDO::FETCH_ASSOC);
 
 
 if ($context=="Closed"){
-    $date =$_GET['date'];
+   $date= date ('Y-m-d H:i:s'); 
     $status="Closed";
 
     $sql5 = "UPDATE issues SET issues.status=:status1, issues.updated=:date1 WHERE issues.id=:id";
@@ -60,7 +60,7 @@ if ($context=="Closed"){
 }
 
 if ($context=="Progress"){
-    $date =$_GET['date'];
+   $date= date ('Y-m-d H:i:s'); 
     $status="In Progress";
     $sql5 = "UPDATE issues SET issues.status=:status1, issues.updated=:date1 WHERE issues.id=:id";
     $stmt5= $conn->prepare($sql5);

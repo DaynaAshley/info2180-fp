@@ -43,10 +43,6 @@ document.addEventListener('DOMContentLoaded', () => {
     
 
     function myFunction1(){
-        var today = new Date();
-        var date = today.getFullYear()+'-'+(today.getMonth()+1)+'-'+today.getDate();
-        var time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
-        var dateTime = date+' '+time;
 
         const urlParams = new URLSearchParams(location.search);
         let array=[];
@@ -67,16 +63,12 @@ document.addEventListener('DOMContentLoaded', () => {
             }
 
             
-            request.open('GET', `detailedissue.php?context=Closed&date=${dateTime}&id=${id}&title=${title}`);
+            request.open('GET', `detailedissue.php?context=Closed&id=${id}&title=${title}`);
             request.send();
     }
     
 
     function myFunction2(){
-        var today = new Date();
-        var date = today.getFullYear()+'-'+(today.getMonth()+1)+'-'+today.getDate();
-        var time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
-        var dateTime = date+' '+time;
         let request = new XMLHttpRequest();
         let lstresult=document.querySelector('.results');
 
@@ -96,7 +88,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
 
             
-        request.open('GET', `detailedissue.php?context=Progress&date=${dateTime}&id=${id}&title=${title}`);
+        request.open('GET', `detailedissue.php?context=Progress&id=${id}&title=${title}`);
         request.send();
     }
     
