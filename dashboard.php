@@ -85,7 +85,6 @@ if ($context=='my_ticket'){
  </tbody>
  <?php endforeach; ?>
 </table>
-<?php } ?> 
 
 <?php if($context=='my_ticket'){?>
  <table class= "ctable">

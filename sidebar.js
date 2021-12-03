@@ -18,7 +18,7 @@ document.addEventListener('DOMContentLoaded', () => {
     newissue.addEventListener('click', () => myFunction2());
 
     function myFunction2(){
-        window.location.href = '#';
+        window.location.href = 'issue.php';
     }
 
     let logout= document.querySelector('.lbtn');

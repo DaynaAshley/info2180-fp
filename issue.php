@@ -51,17 +51,17 @@
             <div class= "type">
                 <label for="type">Type</label>
                 <select id="type" type="text" name="type">
-                    <option value = "bug">Bug</option>
-                    <option value = "proposal">Proposal</option>
-                    <option value = "task">Task</option>
+                    <option >Bug</option>
+                    <option >Proposal</option>
+                    <option >Task</option>
                 </select>
             </div>
             <div class = "prior">
                 <label for="priority">Priority</label>
                 <select id="priority" type="text" name="priority">
-                    <option value = "minor">Minor</option>
-                    <option value = "major">Major</option>
-                    <option value = "critical">Critical</option>
+                    <option>Minor</option>
+                    <option>Major</option>
+                    <option>Critical</option>
                 </select>
 
             </div>

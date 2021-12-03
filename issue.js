@@ -26,42 +26,72 @@ document.addEventListener('DOMContentLoaded', () => {
     function submitButton() {
 
         let title = document.querySelector('#title').value;
-        console.log(title);
+      
         let description = document.querySelector('#description').value;
-        let assigned = document.querySelector('#assigned').value;
+        let assigned = document.querySelector('#name').value;
         let type = document.querySelector('#type').value;
-        console.log(type);
         let priority = document.querySelector('#priority').value;
 
-        if (title.length == 0) {
+        if (title=="") {
             alert("The Title field is required!");
-
-            return false;
         }
-        if (description.length == 0) {
+        if (description=="") {
             alert("The Description field is required!");
-            return false;
+           
         }
-        if (assigned.length == 0) {
+        if (assigned=="") {
             alert("The Assigned By field is required!");
-            return false;
+          
         }
-        if (type.length == 0) {
+        if (type=="") {
             alert("The Type field is required!");
-            return false;
+
         }
-        if (priority.length == 0) {
+        if (priority=="") {
             alert("The Priority field is required!");
-            return false;
         }
 
+        if (title!=""&&description!=""&&assigned!=""&&type!=""&&priority!=""){
 
-        let xhr = new XMLHttpRequest();
-        xhr.open('GET', `issue_info.php?title=${title}&description=${description}&assigned=${assigned}&type=${type}&priority=${priority}`);
+            title=title.trim();
+            title=sanitize(title);
 
-        xhr.send();
+            description=description.trim();
+            description=sanitize(description);
+
+            assigned=assigned.trim();
+            assigned=sanitize(assigned);
+
+            console.log(assigned);
+
+            type=type.trim();
+            type=sanitize(type);
+
+            priority=priority.trim();
+            priority=sanitize(priority);
+
+            let xhr = new XMLHttpRequest();
+
+           
+            xhr.open('GET', `issue_info.php?title=${title}&description=${description}&assigned=${assigned}&type=${type}&priority=${priority}&context=submit`);
+
+            
+            xhr.send();
+            alert("Issue Successfully Added!!");
+
+
+            document.querySelector('#title').value="";
+            document.querySelector('#description').value="";
+
+        }
+
     }
 
+    function sanitize(string) {
+        let map = {'&': '','<': '', '>': '', '"': '',"'": '',"/": ''};
+        let reg = /[&<>"'/]/ig;
+        return string.replace(reg, (match)=>(map[match]));
+      }
 
 
 });

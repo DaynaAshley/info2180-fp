@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', () => {
     create.addEventListener('click', () => myFunction());
 
     function myFunction(){
-        window.location.href = '#';
+        window.location.href = 'issue.php';
     }
     
     let all= document.querySelector('.all_btn');

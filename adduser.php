@@ -30,5 +30,5 @@ $mysqltime = date ('Y-m-d H:i:s');
     $stmt->bindParam(':date_joined', $mysqltime, PDO::PARAM_STR);
     $stmt->execute();
 
-   echo($lastname);
+   
 ?>
