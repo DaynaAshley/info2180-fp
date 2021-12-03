@@ -1,54 +1,5 @@
-body {
-    margin: 0;
-    font-size: 16px;
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
-    font-size: 18px;
-}
-
-header {
-    background-color: black;
-    font-size: 12px;
-    padding: 2px;
-    color: white;
-}
-
-header i {
-    padding-left: 20px;
-    padding-right: 20px;
-}
-
-nav {
-    float: left;
-    background-color: lightgrey;
-    list-style: none;
-    height: 100%;
-    font-size: 30px;
-    padding-bottom: 100%;
-    padding-right: 100px;
-    padding-left: 20px;
-}
-
 i {
-    padding-right: 5px;
-}
-
-.hbtn,
-.abtn,
-.nbtn,
-.lbtn {
-    border: 0px;
-    background-color: lightgray;
-}
-
-li {
-    list-style-type: none;
-}
-
-ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    width: 60px;
+    padding-right: 10px;
 }
 
 header {
@@ -107,12 +58,26 @@ label {
     margin-top: 5px;
 }
 
-main {
-    margin-left: 300px;
+body {
+    margin: 0;
+    font-size: 16px;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
 }
 
-button {
-    margin-left: 0px;
+main {
+    padding-left: 50px;
+}
+
+nav {
+    float: left;
+    background-color: lightgrey;
+    list-style: none;
+    height: 100%;
+    font-size: 30px;
+    padding-bottom: 100%;
+    padding-right: 100px;
+    padding-left: 20px;
+    margin-right: 50px;
 }
 
 input {
@@ -120,35 +85,24 @@ input {
     border: none;
 }
 
-.sidebar {
-    height: 100%;
-    width: 200px;
-    position: absolute;
-    left: 10;
-    top: 10;
-    padding-top: 40px;
-    background-color: lightgray;
-}
-
-.sidebar div {
-    padding: 8px;
-    font-size: 24px;
-    display: block;
-}
-
 .sidebar button {
     padding: 5px;
     margin-left: 0px;
-    width: 200px;
     background-color: lightgray;
     border: none;
 }
 
-main {
-    font-weight: 700;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-}
-
 h2 {
     font-size: 50px;
+}
+
+#submit {
+    margin-top: 10px;
+    background-color: blue;
+    color: white;
+    text-align: center;
+    border: none;
+    border-radius: 5px;
+    width: 150px;
+    height: 30px;
 }
