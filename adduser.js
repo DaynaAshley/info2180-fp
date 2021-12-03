@@ -55,10 +55,6 @@ document.addEventListener('DOMContentLoaded', () => {
             lastname=lastname.trim();
             lastname=sanitize(lastname);
 
-            em.innerHTML="";
-            ln.innerHTML="";
-            fn.innerHTML="";
-            pass.innerHTML="";
 
             let request = new XMLHttpRequest();
             
